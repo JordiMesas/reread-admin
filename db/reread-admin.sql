@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 18-10-2020 a las 07:06:25
+-- Tiempo de generación: 19-10-2020 a las 17:46:39
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -114,6 +114,7 @@ INSERT INTO `BooksAuthors` (`AuthorId`, `BookId`) VALUES
 
 CREATE TABLE `Users` (
   `Id` int(11) NOT NULL,
+  `Name` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `Email` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `Pass` varchar(250) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -122,9 +123,9 @@ CREATE TABLE `Users` (
 -- Volcado de datos para la tabla `Users`
 --
 
-INSERT INTO `Users` (`Id`, `Email`, `Pass`) VALUES
-(1, 'random@random.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-(2, 'test@test.com', '81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `Users` (`Id`, `Name`, `Email`, `Pass`) VALUES
+(1, 'Random', 'random@random.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(2, 'Test', 'test@test.com', '81dc9bdb52d04dc20036dbd8313ed055');
 
 --
 -- Índices para tablas volcadas
@@ -175,7 +176,7 @@ ALTER TABLE `Books`
 -- AUTO_INCREMENT de la tabla `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
